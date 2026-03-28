@@ -21,7 +21,7 @@ struct FInputActionValue;
  *  Specific vehicle configurations are handled in subclasses.
  */
 UCLASS(abstract)
-class AExperimentsECSNNPawn : public AWheeledVehiclePawn, public IVehicleNNInterface
+class AExperimentsECSNNPawn : public AWheeledVehiclePawn, public ISimpleMLVehicleNNInterface
 {
 	GENERATED_BODY()
 
@@ -162,10 +162,10 @@ public:
 	UFUNCTION(BlueprintCallable, Category="Input")
 	void DoResetVehicle();
 
-	// Begin IVehicleNNInterface
+	// Begin ISimpleMLVehicleNNInterface
 	UFUNCTION(BlueprintCallable, Category = "Vehicle|NN")
 	virtual void ApplyNNOutputs(const TArray<float>& Outputs) override;
-	// End IVehicleNNInterface
+	// End ISimpleMLVehicleNNInterface
 
 protected:
 

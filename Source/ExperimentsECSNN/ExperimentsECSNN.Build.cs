@@ -18,7 +18,7 @@ public class ExperimentsECSNN : ModuleRules
 			"PhysicsCore",
 			"UMG",
 			"Slate",
-			"VehicleInterfaces"
+			"SimpleMLInterfaces"
 		});
 
 		PublicIncludePaths.AddRange(new string[] {
