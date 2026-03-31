@@ -178,7 +178,7 @@ void AExperimentsECSNNPawn::DoThrottle(float ThrottleValue)
 	ChaosVehicleMovement->SetThrottleInput(ThrottleValue);
 
 	// reset the brake input
-	ChaosVehicleMovement->SetBrakeInput(0.0f);
+	//ChaosVehicleMovement->SetBrakeInput(0.0f);
 }
 
 void AExperimentsECSNNPawn::DoBrake(float BrakeValue)
@@ -187,7 +187,7 @@ void AExperimentsECSNNPawn::DoBrake(float BrakeValue)
 	ChaosVehicleMovement->SetBrakeInput(BrakeValue);
 
 	// reset the throttle input
-	ChaosVehicleMovement->SetThrottleInput(0.0f);
+	//ChaosVehicleMovement->SetThrottleInput(0.0f);
 }
 
 void AExperimentsECSNNPawn::DoBrakeStart()
@@ -270,9 +270,9 @@ void AExperimentsECSNNPawn::ApplyNNOutputs(const TArray<float>& Outputs)
 	float BrakeValue = FMath::Clamp(Outputs[1], 0.0f, 1.0f);
 	float SteeringValue = FMath::Clamp(Outputs[2], -1.0f, 1.0f);
 
-	DoThrottle(ThrottleValue);
 	DoBrake(BrakeValue);
 	DoSteering(SteeringValue);
+	DoThrottle(ThrottleValue);
 
 	// Optional: Handle brake lights based on brake value
 	if (BrakeValue > 0.1f)
