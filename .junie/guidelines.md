@@ -3,6 +3,7 @@ Plugins-first architecture: Prefer developing features as independent plugins ra
     - Ask when you want to create new modules, never create them without asking or direct instruction
     - When making interfaces, especially used for bridging, consider making them in a separate module. These will require no testing.
 
+Lambdas are ok, but you prefer to write functions and use functions. This to avoid creating code that is not easily reusable.
 
 Test mirroring: For every module, create a corresponding moduleTests that depends on it. This ensures isolation and repeatable tests.
     - Create tests that project the intention or showcase example of how to use various aspect of the module.
