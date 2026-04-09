@@ -27,6 +27,7 @@ Comments: Explain why, not what. The what should be evident from clear naming an
 Avoid cleverness: Favor simplicity, clarity, and explicit intent.
 
 To write tests, use CQTest suite. When multiple tests are needed, move as much logic to common BEFORE_EACH/AFTER_EACH function as possible.
+    - When using Asserts, always add a text explaining what is testing and why it could fail.
 
 Update each plugin README.md as you work on it. Create a table of content and add information about the usage of the plugin (the public API).
     - The README.md will only exists in .git on the main project, and then on main plugins that are also git repositories.
