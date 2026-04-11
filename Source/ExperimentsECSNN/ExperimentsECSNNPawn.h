@@ -163,8 +163,7 @@ public:
 	void DoResetVehicle();
 
 	// Begin ISimpleMLVehicleNNInterface
-	UFUNCTION(BlueprintCallable, Category = "Vehicle|NN")
-	virtual void ApplyNNOutputs(const TArray<float>& Outputs) override;
+	virtual void ApplyNNOutputs(TArrayView<const float> Outputs) override;
 	// End ISimpleMLVehicleNNInterface
 
 protected:

@@ -255,7 +255,7 @@ void AExperimentsECSNNPawn::DoResetVehicle()
 	GetMesh()->SetPhysicsLinearVelocity(FVector::ZeroVector);
 }
 
-void AExperimentsECSNNPawn::ApplyNNOutputs(const TArray<float>& Outputs)
+void AExperimentsECSNNPawn::ApplyNNOutputs(TArrayView<const float> Outputs)
 {
 	if (Outputs.Num() < 3)
 	{
