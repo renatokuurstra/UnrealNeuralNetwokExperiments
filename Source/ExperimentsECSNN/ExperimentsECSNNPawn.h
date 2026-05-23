@@ -21,7 +21,7 @@ struct FInputActionValue;
  *  Specific vehicle configurations are handled in subclasses.
  */
 UCLASS(abstract)
-class AExperimentsECSNNPawn : public AWheeledVehiclePawn, public ISimpleMLVehicleNNInterface
+class AExperimentsECSNNPawn : public AWheeledVehiclePawn, public IVehicleNNInterface
 {
 	GENERATED_BODY()
 
